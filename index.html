@@ -1,0 +1,82 @@
+<html>
+  <div id="head-container">
+  <head id="head">
+      <link href= "./style.css" rel = "stylesheet" type = "text/css">
+    <h1 id="title">
+      Equipment Loan Rate Estimator
+    </h1>
+    <div id="p-element"><p id="description" background-color: hsl(179, 48%, 70%)>This form will help you estimate loan rates. To get final rates, please apply for financing through your account manager.
+    </p>
+    </div>
+  </head>
+  <body>
+    <div>
+      <script>
+        function estimateRate() {
+    var tib = document.getElementById("number").value;
+    var oneTruck = document.getElementById("1-truck").checked;
+if (tib < 2) {
+    alert("Startup financing: down payment required. Rates from 10%");
+} else if (oneTruck == true) {
+    alert("Due to fleet size, down payment required. Rates from 9%");
+} else {
+    alert("No down payment. Rates from 4% to 8%, depending on equipment age and amount requested.")
+}
+}
+function checkIndustry() {
+  var isTransportation = document.getElementById("isTransportation").selected;
+  if (isTransportation == true) {
+    document.getElementById("industryType").removeAttribute("style");
+  } else { document.getElementById("industryType").style.display = "none";
+}
+}
+      </script>
+            <form onsubmit="return estimateRate();" id="survey-form">
+              <label for="name" id="name-label"> Name 
+              <input id="name" type="text" placeholder="Enter your name (optional)">
+              </label>
+              <br>
+              <label for="email" id="email-label"> Email
+        <input id="email" type="email" required placeholder="Enter your email (required)">
+              </label>
+              <br>
+               <label for="number" id="number-label"> Time in business
+        <input id="number" type="number" required min="00" max="99" placeholder="Years">
+                 </label>
+              <br>
+              <label for="dropdown" id="dropdown-label">Main Industry
+              <select id="dropdown" name="dropdown" required onchange="checkIndustry();" >
+                <option value="" disabled selected hidden>Choose main industry</option>
+                <option value="Construction">Construction</option>
+                <option value="Transportation" id="isTransportation">Transportation</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Other">Other</option>
+              </select>
+                </label>
+              <br>
+              <div id="industryType" style="display: none;">
+              <label for="radio-buttons" id="radio-buttons" >How many trucks do you have?</label>
+                <br>
+                <!-- trying decrease to 2 options <input name="radio-buttons" id="radio-buttons" value="0" type="radio" checked>0 trucks
+                <br> -->
+                <input name="radio-buttons" id="1-truck" value="1" type="radio">1 or none
+                <br>
+                <input name="radio-buttons" id="2-trucks" value="2" type="radio">2 or more
+                <br> 
+              </div>
+                <div class="container">
+                    <div class="center">
+                <button id="submit" type="submit">Submit</button>
+                    </div>
+                </div>
+      </form>
+    </div>
+      </div>
+      <!-- <script src="./script.js"></script> -->
+  </body>
+ 
+  <footer>
+  </footer>
+
+  
+</html>
