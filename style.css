@@ -1,76 +1,33 @@
-  h1 {
-    background-color: hsl(179, 48%, 70%);
-    display: flex;
-    justify-content: center;
-    width: 50vw;
-    padding: 0 30 0 30;
-    font-family: monospace;
-    
+.container, .milestones {
+    padding:5px 30px 30px 30px;
+    margin:10px;
+    border:solid white 1px;
+    border-radius:5px;
+    background-color:#e6e6e6;
+    text-align:center;
   }
-  #title {
-    display: flex;
-    justify-content: center;
-    width: 50vw;
-    
-}
-  h3 {
-    background-color: hsl(179, 48%, 70%)
-    
+
+  .btn-success, .btn-danger {
+    width:15vw;
   }
- 
-  #head-container {
-    justify-items: center;
+
+  h4 {
+      left: 1rem;
+  }
+
+
+.milestones {
     display: flex;
     flex-direction: column;
-    width: 50vw;
-    padding: 0 30 0 30;
-    
-  }
-  body {
-    background-image: url('https://biv.com/sites/default/files/styles/media_image/public/2017-12/gv_20130903_biv0119_130909993.jpg?itok=4W4GbGzp');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
-    font-size: large;
-  }
-  #number {
-    width: 9vw;
-  }
-  form {
-    background-color: hsl(179, 48%, 70%);
-    padding: 30px;
-    width: 50vw;
-    opacity: 80%;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    flex-direction: column;
-    font-family: monospace;
-    font-size: large;
-    font-weight: bold;
-  }
- 
-  #p-element {
-    background-color: hsl(179, 48%, 70%);
-    margin-bottom: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
-    padding: 0 30 0 30;
-  }
-  .container {
-    height: 50px;
-    position: relative;
-    
-  }
-  
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+}
+
+#upgrade_1, #upgrade_2, #upgrade_3, #upgrade_4, #upgrade_5 {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+}
